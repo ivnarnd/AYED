@@ -8,8 +8,8 @@ import tp2.ejercicio1.BinaryTree;
 public class ContadorArbol {
 	private BinaryTree<Integer> arbol;
 	
-	public ContadorArbol(){
-		this.arbol = new BinaryTree<>();
+	public ContadorArbol(BinaryTree<Integer> arbol){
+		this.arbol = arbol;
 	}
 	private void postOrden(BinaryTree<Integer>nodo,List<Integer> pares){
 		if(nodo.hasLeftChild()){
@@ -40,16 +40,16 @@ public class ContadorArbol {
 	}
 	
 	public static void main(String []args){
-		ContadorArbol ca = new ContadorArbol();
-		ca.arbol.setData(8);
+		BinaryTree<Integer> ab = new BinaryTree<>(8);
+		
 		BinaryTree<Integer> hijoIzquierdo = new BinaryTree<Integer>(2);
 		hijoIzquierdo.addLeftChild(new BinaryTree<Integer>(4));
 		hijoIzquierdo.addRightChild(new BinaryTree<Integer>(5));
 		BinaryTree<Integer> hijoDerecho= new BinaryTree<Integer>(3);
 		hijoDerecho.addLeftChild(new BinaryTree<Integer>(6));
-		ca.arbol.addLeftChild(hijoIzquierdo);
-		ca.arbol.addRightChild(hijoDerecho);
-		
+		ab.addLeftChild(hijoIzquierdo);
+		ab.addRightChild(hijoDerecho);
+		ContadorArbol ca = new ContadorArbol(ab);
 		List<Integer> listaPares = ca.numerosPares();
 		for(int p:listaPares){
 			System.out.println(p);
