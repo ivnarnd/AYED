@@ -1,4 +1,4 @@
-package org.example;
+package tp2.ejercicio1;
 import java.util.*;
 public class Queue<T> extends Sequence<T> {
     protected List<T> data;

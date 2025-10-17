@@ -1,4 +1,4 @@
-package org.example;
+package tp2.ejercicio1;
 
     public abstract class Sequence<T> {
 
