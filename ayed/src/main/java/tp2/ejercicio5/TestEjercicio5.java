@@ -1,8 +1,11 @@
-package tp2.ejercicio4;
-import tp2.ejercicio1.*;
-public class TestEjercicio4 {
+package tp2.ejercicio5;
+
+import tp2.ejercicio1.BinaryTree;
+
+public class TestEjercicio5 {
 
 	public static void main(String[] args) {
+		
 		BinaryTree<Integer> ab = new BinaryTree<Integer>(10);
 		
 		ab.addLeftChild(new BinaryTree<Integer>(2));
@@ -27,11 +30,9 @@ public class TestEjercicio4 {
 		ab.getRightChild().getRightChild().addLeftChild(new BinaryTree<Integer>(2));
 		ab.getRightChild().getRightChild().addRightChild(new BinaryTree<Integer>(1));
 		
+		ProfundidadDeArbolBinario test = new ProfundidadDeArbolBinario(ab);
 		
-		RedBinariaLlena test = new RedBinariaLlena(ab);
-		
-		System.out.println(test.retardoReenvio());
-		
+		System.out.println(test.sumaElementosProfundidad(2));
 		
 	}
 
