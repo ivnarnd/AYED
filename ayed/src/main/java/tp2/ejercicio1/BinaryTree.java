@@ -114,7 +114,7 @@ public class BinaryTree <T> {
 			ab = cola.dequeue();
 			if(ab!= null) {
 				if(nivel >= n && nivel <= m) {
-					System.out.print("Nivel "+nivel+" "+ab+" ");
+					System.out.print(ab+" ");
 				}
 				if(ab.hasLeftChild()) {
 					cola.enqueue(ab.getLeftChild());
